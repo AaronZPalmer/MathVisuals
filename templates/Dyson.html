@@ -12,6 +12,7 @@
         The Dyson game
 
         <canvas id="canvas"></canvas>
+        <p> (resizing window may help focus) </p><br>
 
         <form id="setValForm" action="/action_page.php" method="post">
             N: <input type="text" name="N" value={{ N }}><br>
@@ -20,10 +21,17 @@
             <input type="button" onclick="setVals()" value="Submit">
         </form>
 
-        <p id="universalityClass"> Universality class (beta / sigma^2) = {{ universality_class }}</p><br>
+        <p id="universalityClass"> Universality class (beta / sigma^2) = {{ universality_class }}</p>
         <p> The universality class is given by 2/3*(1 + sqrt(1+6*C/sigma^4))</p>
         <p> You must select C >= -sigma^4/6 and in theory the universality class should be greater than or equal to 1 to avoid collisions / divergent cost. </p>
         <script type="text/javascript" src="{{ url_for('static', filename='js/Dyson.js') }}"></script>
+
+        <p> The Dyson game was developed in the paper <a href="https://arxiv.org/abs/1808.02464">The Dyson and Coulomb games</a> by Ren&eacute; Carmona, Mark Cerenzia, and myself. </p>
+
+        <p>In the Dyson game each agent resides on the real line and aims to minimize a cost that penalizes the sum of the reciprocal square gaps with other agent (the strength of this interaction is the parameter C).  The agents control their drift with a quadratic cost and are subject to a random diffusion with parameter sigma.  The number of agents is given by the parameter N.  A general universality hypothesis states that interacting systems of ordered particles on the real line will admit universal behavior depending on a sole universality class parameter (beta / sigma^2). Such behavior was first recognized for the eigenvalues of random Hermition matrices and has been observed in phenomena ranging from the arrival times of buses to the position of birds perched on a telephone line and cars parks on the side of the street.  In our work we have shown the universal behavor for the case of the Dyson game, and determined the dependence of the universality class parameter on the game parameters (see above).  Interestingly, the universality class also depends on the information available to the players.  Here we only show the case where all players have full information of the state of each other player.
+        </p>
+
+        <a href="{{ url_for('visuals') }}"> Aaron's Math Visuals </a>
 
     </body>
 </html>

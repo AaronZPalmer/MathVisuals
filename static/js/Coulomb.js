@@ -12,6 +12,7 @@ window.addEventListener('resize', resize);
 // document.addEventListener('mousemove', draw);
 // document.addEventListener('mousedown', getPosition);
 // document.addEventListener('mouseenter', setPosition);
+resize();
 
 var intervalId = window.setInterval(function(){
   getPosition()

@@ -12,6 +12,7 @@
         The Coulomb game
 
         <canvas id="canvas"></canvas>
+        <p> (resizing window may help focus) </p><br>
 
         <form id="setValForm" action="/action_page.php" method="post">
             N: <input type="text" name="N" value={{ N }}><br>
@@ -21,6 +22,16 @@
             <input type="button" onclick="setVals()" value="Submit">
         </form>
         <script type="text/javascript" src="{{ url_for('static', filename='js/Coulomb.js') }}"></script>
+
+        <p> The Coulomb game was an extension of the The Dyson game in the paper <a href="https://arxiv.org/abs/1808.02464">The Dyson and Coulomb games</a> by Ren&eacute; Carmona, Mark Cerenzia, and myself. 
+        </p>
+
+        <p>In the Coulomb game each agent now resides in two dimensions and aims to minimize a cost that penalizes the sum of the reciprocal square gaps with other agent an the reciprocal diameter squared for each circumcircle inscribed by two other agents (the strength of this interaction is controlled by the parameter C).  Check the box above to view the circumcircles (best when N is small).  The agents similarly control their drift with a quadratic cost and are subject to a random 2D diffusion with parameter sigma.  The number of agents is given by the parameter N.</p>
+
+        <p>The optimal dynamics are given by the Coulomb gas dynamics.  It is conjectured that when sigma goes to zero and N goes to infinity, the optimal configuration is given by a hexagonal `Abrikosov' lattice.  The Coulomb game generalizes the Dyson game and can also be posed in higher dimensions, however, 2d is the critical dimension.  This means that in 1D the leading order dynamics depends on the singularity of the cost, which determines the universality class.  In higher dimensions, the singularity is not felt in the leading order of the dynamics which is described well by the `mean field' behavior.  In two dimensions, however, there is a nonvanishing logarithmic correction, which has been described in the work of Sylvia Serfaty and others.
+        </p>
+
+        <a href="{{ url_for('visuals') }}"> Aaron's Math Visuals </a>
 
     </body>
 </html>
