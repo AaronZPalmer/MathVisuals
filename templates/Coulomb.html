@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    
+    <body>
+        
+        <head>
+            
+            <title> The Coulomb game </title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        </head>
+
+        The Coulomb game
+
+        <canvas id="canvas"></canvas>
+
+        <form id="setValForm" action="/action_page.php" method="post">
+            N: <input type="text" name="N" value={{ N }}><br>
+            sigma: <input type="text" name="sigma" value = {{ sigma }}><br>
+            C: <input type="text" name="C" value = {{ C }}><br>
+            Circumcircles: <input type="checkbox" id="myCheck"><br><br>
+            <input type="button" onclick="setVals()" value="Submit">
+        </form>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/Coulomb.js') }}"></script>
+
+    </body>
+</html>

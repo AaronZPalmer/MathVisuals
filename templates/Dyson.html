@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    
+    <body>
+        
+        <head>
+            
+            <title> The Dyson game </title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        </head>
+
+        The Dyson game
+
+        <canvas id="canvas"></canvas>
+
+        <form id="setValForm" action="/action_page.php" method="post">
+            N: <input type="text" name="N" value={{ N }}><br>
+            sigma: <input type="text" name="sigma" value = {{ sigma }}><br>
+            C: <input type="text" name="C" value = {{ C }}><br><br>
+            <input type="button" onclick="setVals()" value="Submit">
+        </form>
+
+        <p id="universalityClass"> Universality class (beta / sigma^2) = {{ universality_class }}</p><br>
+        <p> The universality class is given by 2/3*(1 + sqrt(1+6*C/sigma^4))</p>
+        <p> You must select C >= -sigma^4/6 and in theory the universality class should be greater than or equal to 1 to avoid collisions / divergent cost. </p>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/Dyson.js') }}"></script>
+
+    </body>
+</html>
