@@ -80,3 +80,7 @@ def koala_sim():
         k.circumcircles = data['circumcircles']
         # return data, 200
         return "Success", 200
+
+
+if __name__ == '__main__':
+    app.run()
