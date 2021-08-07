@@ -27,6 +27,11 @@ def Coulomb(name=None):
 
     return render_template('Coulomb.html', name=name, N=k.N, sigma=k.sigma, C=k.C)
 
+@app.route("/Information.html")
+def Information(name=None):
+
+    return render_template('Information.html')
+
 @app.route('/bus_sim', methods=['GET', 'POST'])
 def bus_sim():
     # GET request

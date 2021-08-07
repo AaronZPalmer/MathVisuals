@@ -14,13 +14,18 @@
         
         <h1><center> Aaron's Math Visuals </center></h1>
         
-            <li><a href="{{ url_for('Dyson') }}">The Dyson game</a>  Add image</li>
-            <li><a href="{{ url_for('Coulomb') }}">The Coulomb game</a>  Add image</li>
-        </body>
+            <li><a href="{{ url_for('Dyson') }}">The Dyson game</a></li>
+            <img src="{{ url_for('static', filename='images/Dyson_cropped.png') }}" alt="Dyson Pic" width="300">
+            <li><a href="{{ url_for('Coulomb') }}">The Coulomb game</a></li>
+            <img src="{{ url_for('static', filename='images/Coulomb.png') }}" alt="Coulomb Pic" width="200">
+            <li><a href="{{ url_for('Information') }}">The role of information in high dimensional stochastic optimal control</a> </li>
+  
 
         <p> This page hosts simulations related to my <a href="https://www.math.ucla.edu/~azp/ResearchAP.html">research</a>.  It is in development and may or may not work. </p>
         <br>
         <p> All code is open source and can be found at <a href="https://github.com/AaronZPalmer/MathVisuals/"> https://github.com/AaronZPalmer/MathVisuals/ </a>. </p>
         <br>
         <p><a href="https://www.math.ucla.edu/~azp/index.html"> Aaron's home page at UCLA </p>
+
+      </body>
 </html>

@@ -56,3 +56,9 @@ canvas {
 canvas {
   background-color: rgb(80, 80, 80);
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
